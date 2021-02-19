@@ -2,9 +2,16 @@ import React from "react"
 
 const HeroSection = () => {
   return (
-    <>
-      <h1>HeroSection</h1>
-    </>
+    <section>
+      {/* Todo: Add headshot image here */}
+      <h1>
+        Hi, I'm <strong>Dan Boterashvili</strong>
+      </h1>
+      <p>
+        Software Engineer with a passion for creative technology and human
+        movement.
+      </p>
+    </section>
   )
 }
 
