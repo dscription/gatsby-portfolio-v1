@@ -13,6 +13,7 @@ const Section = styled.section`
   p {
     font-size: ${props => props.theme.fonts.primary.content};
   }
+  text-align: center;
 `
 
 export default Section

@@ -1,30 +1,30 @@
 import React from "react"
 import styled from "styled-components"
-import {  lato } from "../utilities"
+import { lato } from "../utilities"
 
 const Header = ({ className }) => {
   return (
     <header className={className}>
       <Nav>
         <div>
-          <a href="">Dan Boterashvili</a>
+          <Logo href="">Dan Boterashvili</Logo>
         </div>
         <Links>
           <List>
             <li>
-              <a href="">About Me</a>
+              <Link href="">About Me</Link>
             </li>
             <li>
-              <a href="">Experience</a>
+              <Link href="">Experience</Link>
             </li>
             <li>
-              <a href="">Featured Projects</a>
+              <Link href="">Featured Projects</Link>
             </li>
             <li>
-              <a href="">Projects</a>
+              <Link href="">Projects</Link>
             </li>
             <li>
-              <a href="">Contact</a>
+              <Link href="">Contact</Link>
             </li>
           </List>
           <div>
@@ -36,8 +36,25 @@ const Header = ({ className }) => {
   )
 }
 
+const Logo = styled.a`
+  text-decoration: none;
+  color: ${props => props.theme.colors.primary};
+  font-size: 35px;
+`
+
 const ResumeButton = styled.a`
-  border: 2px solid white;
+  border: 2px solid;
+  border-color: ${props => props.theme.colors.accent};
+  color: ${props => props.theme.colors.accent};
+  padding: 5px;
+  // todo: give button a hover state.
+  // todo: give button a border-radius.
+`
+
+const Link = styled.a`
+  text-decoration: none;
+  color: ${props => props.theme.colors.primary};
+  margin: 0px 10px;
 `
 
 const List = styled.ol`
@@ -63,5 +80,6 @@ const Nav = styled.nav`
 export default styled(Header)`
   background: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.primary};
-  font-family: ${props => props.theme.fonts.primary.font}
+  font-family: ${props => props.theme.fonts.primary.font};
+  padding: 2px 10px;
 `
