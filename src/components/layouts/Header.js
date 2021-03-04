@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { navy, peach } from "../utilities"
+import { navy, peach, playfair, lato } from "../utilities"
 
 const Header = ({ className }) => {
   return (
@@ -21,4 +21,5 @@ const Header = ({ className }) => {
 export default styled(Header)`
   background: ${navy};
   color: ${peach};
+  ${lato};
 `

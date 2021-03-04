@@ -7,6 +7,7 @@
 
 import React from "react"
 import PropTypes from "prop-types"
+import {navy, peach} from '../components/utilities/Colors'
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./layouts/Header"
@@ -31,6 +32,9 @@ const Layout = ({ children }) => {
           margin: `0 auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
+          background: `${navy}`,
+          color: `${peach}`
+
         }}
       >
         <main>{children}</main>
