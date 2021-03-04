@@ -14,6 +14,10 @@ const Section = styled.section`
     font-size: ${props => props.theme.fonts.primary.content};
   }
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  padding: 80px;
 `
 
 export default Section

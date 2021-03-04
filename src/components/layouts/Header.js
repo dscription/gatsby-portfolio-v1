@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { lato } from "../utilities"
 
 const Header = ({ className }) => {
   return (
@@ -47,6 +46,8 @@ const ResumeButton = styled.a`
   border-color: ${props => props.theme.colors.accent};
   color: ${props => props.theme.colors.accent};
   padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
   // todo: give button a hover state.
   // todo: give button a border-radius.
 `
