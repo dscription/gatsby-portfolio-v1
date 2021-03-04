@@ -1,9 +1,10 @@
 import React from "react"
+import Section from '../layouts/Section'
 
 const About = () => {
   return (
-    <>
-      <h1>Who am I?</h1>
+    <Section>
+      <h2>Who am I?</h2>
       <p>
         I am a personal trainer and visual artist turned software engineer. As a
         trainer I have spent countless hours working with people on a personal
@@ -13,7 +14,7 @@ const About = () => {
         persistent when it comes to finding solutions to complex problems. I
         strive to create products and experiences that bring people together.
       </p>
-    </>
+    </Section>
   )
 }
 

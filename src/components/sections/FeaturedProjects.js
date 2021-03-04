@@ -1,10 +1,11 @@
 import React from "react"
+import Section from '../layouts/Section'
 
 const FeaturedProjects = () => {
   return (
-    <>
-      <h1>FeaturedProjects</h1>
-    </>
+    <Section>
+      <h2>FeaturedProjects</h2>
+    </Section>
   )
 }
 

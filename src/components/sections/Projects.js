@@ -1,10 +1,11 @@
 import React from "react"
+import Section from "../layouts/Section"
 
 const Projects = () => {
   return (
-    <>
-      <h1>Projects</h1>
-    </>
+    <Section>
+      <h2>Projects</h2>
+    </Section>
   )
 }
 

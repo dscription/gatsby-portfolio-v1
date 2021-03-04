@@ -1,5 +1,6 @@
-import {createGlobalStyle} from 'styled-components'
-import {montserrat, lato, playfair} from './utilities/Type'
+import { createGlobalStyle } from "styled-components"
+import { montserrat, lato, playfair } from "./utilities/Type"
+import { navy, peach } from "./utilities/Colors"
 
 const GlobalStyle = createGlobalStyle`
   html {
@@ -13,7 +14,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  ${'' /* color: hsla(0, 0%, 0%, 0.8); */}
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -24,15 +25,6 @@ body {
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
-h1 {
-  ${'' /* ${montserrat}
-  ${lato} */}
-  ${playfair}
-}
-
-header {
-  ${lato}
-}
 `
 
-export default GlobalStyle;
+export default GlobalStyle
