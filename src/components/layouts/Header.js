@@ -12,6 +12,9 @@ const Header = ({ className }) => {
           <li>Link 2</li>
           <li>Link 3</li>
           <li>Link 4</li>
+          <li>
+            <button>Resume</button>
+          </li>
         </ol>
       </nav>
     </header>
