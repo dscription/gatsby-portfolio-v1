@@ -7,12 +7,14 @@ import Experience from "../components/sections/Experience"
 import FeaturedProjects from "../components/sections/FeaturedProjects"
 import Projects from "../components/sections/Projects"
 import Contact from "../components/sections/Contact"
+import { lightGreen } from "../components/utilities/Colors"
 
 const theme = {
   colors: {
     primary: "#FFEECB",
     secondary: "#E3F0FF",
     background: "#0a192f",
+    backgroundSecondary: lightGreen,
     accent: "#F9F871",
   },
   fonts: {
