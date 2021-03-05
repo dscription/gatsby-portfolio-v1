@@ -20,6 +20,13 @@ module.exports = {
         path: `${__dirname}/content/featured`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `jobs`,
+        path: `${__dirname}/content/jobs`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sharp`,

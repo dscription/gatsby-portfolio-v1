@@ -1,9 +1,26 @@
 import React, { useState } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Section from "../layouts/Section"
 
 const Experience = () => {
   // todo: track which job has been selected, and render the appropriate data in the paragraph.
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/jobs/" } }) {
+        edges {
+          node {
+            frontmatter {
+              title
+              company
+              accomplishments
+              date
+            }
+          }
+        }
+      }
+    }
+  `)
   return (
     <Section>
       <h2>Experience</h2>
@@ -16,19 +33,27 @@ const Experience = () => {
             <li>Job</li>
           </Jobs>
         </JobsContainer>
-        <div>
+        <AccomplishmentContainer>
           <p>Job title</p>
           <p>Date</p>
-          <ul>
+          <Accomplishments>
             <li>Accomplished</li>
             <li>Accomplished</li>
             <li>Accomplished</li>
-          </ul>
-        </div>
+          </Accomplishments>
+        </AccomplishmentContainer>
       </Flex>
     </Section>
   )
 }
+
+const AccomplishmentContainer = styled.div``
+
+const Accomplishments = styled.ul`
+  li {
+    list-style: none;
+  }
+`
 
 const Flex = styled.div`
   display: flex;
