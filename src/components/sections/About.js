@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import Section from "../layouts/Section"
 import { StaticImage } from "gatsby-plugin-image"
-import { Button, Heading, SubHeading, Content } from "../elements"
+import {SubHeading, Content } from "../elements"
 
 const About = () => {
   return (

@@ -1,8 +1,9 @@
 import React from "react"
+import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Featured from "../layouts/Featured"
 import Section from "../layouts/Section"
-import { Button, Heading, SubHeading, Content } from "../elements"
+import { SubHeading } from "../elements"
 
 const FeaturedProjects = () => {
   const data = useStaticQuery(graphql`
@@ -28,8 +29,8 @@ const FeaturedProjects = () => {
     ({ node }) => node
   )
   return (
-    <Section>
-      <SubHeading>FeaturedProjects</SubHeading>
+    <Container>
+      <SubHeading>Featured Projects</SubHeading>
       {featuredProjects &&
         featuredProjects.map(({ node }, index) => {
           const { html, frontmatter } = node
@@ -37,8 +38,12 @@ const FeaturedProjects = () => {
 
           return <Featured title={title} html={html} />
         })}
-    </Section>
+    </Container>
   )
 }
+
+const Container = styled(Section)`
+  
+`
 
 export default FeaturedProjects

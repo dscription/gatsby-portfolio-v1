@@ -1,6 +1,4 @@
 import { createGlobalStyle } from "styled-components"
-import { montserrat, lato, playfair } from "./utilities/Type"
-import { navy, peach } from "./utilities/Colors"
 
 const GlobalStyle = createGlobalStyle`
   html {

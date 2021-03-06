@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "styled-components"
-import { Heading } from "../utilities"
+import { SubHeading } from "../elements"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Featured = ({title, html}) => {
   return (
     <FeaturedContainer>
       <TextContainer>
-        <h2>{title}</h2>
+        <SubHeading>{title}</SubHeading>
         <DescriptionContainer dangerouslySetInnerHTML={{ __html: html }} />
         {/* //todo: Add list of project technolgies */}
         {/* //todo: Add link to github and deployed project */}

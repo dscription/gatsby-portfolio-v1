@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Section from "../layouts/Section"
-import { Button, Heading, SubHeading, Content } from "../elements"
+import {SubHeading, Content } from "../elements"
 
 const Experience = () => {
   const [jobIndex, setJobIndex] = useState(0)
@@ -24,11 +24,7 @@ const Experience = () => {
   `)
 
   const jobs = data.allMarkdownRemark.edges.filter(({ node }) => node)
-
   const job = jobs[jobIndex].node.frontmatter
-  {
-    console.log(job)
-  }
 
   return (
     <Section>
@@ -58,7 +54,9 @@ const Experience = () => {
           <Content>{job.date}</Content>
           <Accomplishments>
             {job.accomplishments.map((accomplishment, index) => (
-              <li key={index}>{accomplishment}</li>
+              <li key={index}>
+                <Content>{accomplishment}</Content>
+              </li>
             ))}
           </Accomplishments>
         </AccomplishmentContainer>
@@ -86,7 +84,6 @@ const Accomplishments = styled.ul`
     list-style: none;
   }
 `
-
 const Flex = styled.div`
   display: flex;
   flex-direction: column;
@@ -108,13 +105,7 @@ const Jobs = styled.ul`
     padding: 10px;
     min-width: 80px;
     border: 2px solid white;
-    /* add a hover state */
   }
-
-  /* li:hover {
-    background-color: ${props => props.theme.colors.accent};
-    color: ${props => props.theme.colors.background}
-  } */
 `
 
 export default Experience
