@@ -80,6 +80,7 @@ const Nav = styled.nav`
 
 export default styled(Header)`
   display: flex;
+  justify-content: center;
   height: 100px;
   background: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.primary};
@@ -88,5 +89,4 @@ export default styled(Header)`
   line-height: ${props => props.theme.fonts.primary.contentHeight};
   padding: 0px 30px;
   align-items: center;
-  justify-content: center;
 `

@@ -4,9 +4,8 @@ import styled from "styled-components"
 import Section from "../layouts/Section"
 import { Button, Heading, SubHeading, Content } from "../elements"
 
-
 const Experience = () => {
-  // todo: track which job has been selected, and render the appropriate data in the paragraph.
+  const [jobIndex, setJobIndex] = useState(0)
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/jobs/" } }) {
@@ -23,25 +22,40 @@ const Experience = () => {
       }
     }
   `)
+
+  const jobs = data.allMarkdownRemark.edges.filter(({ node }) => node)
+
+  const job = jobs[jobIndex].node.frontmatter
+  {
+    console.log(job)
+  }
+
   return (
     <Section>
       <SubHeading>Experience</SubHeading>
-      {/* //todo: map through job titles and render them as a list */}
       <Flex>
         <JobsContainer>
           <Jobs>
-            <li>Job</li>
-            <li>Job</li>
-            <li>Job</li>
+            {jobs &&
+              jobs.map(({ node }, index) => {
+                const { frontmatter } = node
+                const { title, company, date, accomplishments } = frontmatter
+
+                return (
+                  <li key={index} onClick={() => setJobIndex(index)}>
+                    {company}
+                  </li>
+                )
+              })}
           </Jobs>
         </JobsContainer>
         <AccomplishmentContainer>
-          <Content>Job title</Content>
-          <Content>Date</Content>
+          <Content>{job.company}</Content>
+          <Content>{job.date}</Content>
           <Accomplishments>
-            <li>Accomplished</li>
-            <li>Accomplished</li>
-            <li>Accomplished</li>
+            {job.accomplishments.map((accomplishment, index) => (
+              <li key={index}>{accomplishment}</li>
+            ))}
           </Accomplishments>
         </AccomplishmentContainer>
       </Flex>
