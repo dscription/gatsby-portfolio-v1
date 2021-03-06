@@ -42,9 +42,13 @@ const Experience = () => {
                 const { title, company, date, accomplishments } = frontmatter
 
                 return (
-                  <li key={index} onClick={() => setJobIndex(index)}>
-                    {company}
-                  </li>
+                  <JobSelector
+                    key={index}
+                    onClick={() => setJobIndex(index)}
+                    selected={jobIndex === index ? true : false}
+                  >
+                    <span>{company}</span>
+                  </JobSelector>
                 )
               })}
           </Jobs>
@@ -63,6 +67,18 @@ const Experience = () => {
   )
 }
 
+const JobSelector = styled.li`
+  background-color: ${props =>
+    props.selected === true ? props.theme.colors.accent : ""};
+  color: ${props =>
+    props.selected === true ? props.theme.colors.background : ""};
+
+  &:hover {
+    background-color: ${props => props.theme.colors.accent};
+    color: ${props => props.theme.colors.background};
+  }
+`
+
 const AccomplishmentContainer = styled.div``
 
 const Accomplishments = styled.ul`
@@ -76,6 +92,9 @@ const Flex = styled.div`
   flex-direction: column;
   width: 80%;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px auto;
 `
 const JobsContainer = styled.div`
   display: flex;
@@ -91,6 +110,11 @@ const Jobs = styled.ul`
     border: 2px solid white;
     /* add a hover state */
   }
+
+  /* li:hover {
+    background-color: ${props => props.theme.colors.accent};
+    color: ${props => props.theme.colors.background}
+  } */
 `
 
 export default Experience

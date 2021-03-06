@@ -10,11 +10,10 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   overflow-y: scroll;
 }
-body {
+  body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  ${'' /* color: hsla(0, 0%, 0%, 0.8); */}
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
@@ -24,6 +23,15 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
 }
+
+  button:hover {
+    background-color: ${props => props.theme.colors.accent};
+    color: ${props => props.theme.colors.background}
+  }
+
+  a:hover {
+    color: ${props => props.theme.colors.accent}
+  }
 
 `
 
