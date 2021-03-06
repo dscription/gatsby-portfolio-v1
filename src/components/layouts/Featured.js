@@ -6,7 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Featured = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/featured/" } }) {
         edges {
           node {
             frontmatter {
