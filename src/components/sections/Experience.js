@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Section from "../layouts/Section"
+import { Button, Heading, SubHeading, Content } from "../elements"
+
 
 const Experience = () => {
   // todo: track which job has been selected, and render the appropriate data in the paragraph.
@@ -23,7 +25,7 @@ const Experience = () => {
   `)
   return (
     <Section>
-      <h2>Experience</h2>
+      <SubHeading>Experience</SubHeading>
       {/* //todo: map through job titles and render them as a list */}
       <Flex>
         <JobsContainer>
@@ -34,8 +36,8 @@ const Experience = () => {
           </Jobs>
         </JobsContainer>
         <AccomplishmentContainer>
-          <p>Job title</p>
-          <p>Date</p>
+          <Content>Job title</Content>
+          <Content>Date</Content>
           <Accomplishments>
             <li>Accomplished</li>
             <li>Accomplished</li>

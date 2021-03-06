@@ -8,6 +8,7 @@ const Section = styled.section`
   flex-direction: column;
   justify-content: center;
   padding: 80px;
+  margin: 0px auto;
 `
 
 export default Section

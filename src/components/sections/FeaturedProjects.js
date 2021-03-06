@@ -1,11 +1,13 @@
 import React from "react"
 import Featured from "../layouts/Featured"
 import Section from '../layouts/Section'
+import { Button, Heading, SubHeading, Content } from "../elements"
+
 
 const FeaturedProjects = () => {
   return (
     <Section>
-      <h2>FeaturedProjects</h2>
+      <SubHeading>FeaturedProjects</SubHeading>
       <Featured />
     </Section>
   )

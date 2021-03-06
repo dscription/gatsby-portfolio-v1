@@ -2,13 +2,14 @@ import React from "react"
 import styled from "styled-components"
 import Section from "../layouts/Section"
 import { StaticImage } from "gatsby-plugin-image"
+import { Button, Heading, SubHeading, Content } from "../elements"
 
 const About = () => {
   return (
     <Row>
       <TextContainer>
-        <h2>Who am I?</h2>
-        <p>
+        <SubHeading>Who am I?</SubHeading>
+        <Content>
           I am a personal trainer and visual artist turned software engineer. As
           a trainer I have spent countless hours working with people on a
           personal level helping them create lasting change in their lives. I am
@@ -17,8 +18,8 @@ const About = () => {
           empathetic, curious, and persistent when it comes to finding solutions
           to complex problems. I strive to create products and experiences that
           bring people together.
-        </p>
-        <p>Here are some technologies that I am proficient in:</p>
+        </Content>
+        <Content>Here are some technologies that I am proficient in:</Content>
         <List>
           <li>React</li>
           <li>HTML & CSS</li>
