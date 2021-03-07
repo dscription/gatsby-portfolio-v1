@@ -55,6 +55,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0px auto;
 `
 const ImageContainer = styled.div`
   width: 50%;

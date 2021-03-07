@@ -3,5 +3,5 @@ import styled from "styled-components"
 
 export const Content = styled.p`
   font-size: ${props => props.theme.fonts.primary.content};
-    font-size: ${props => props.theme.fonts.primary.contentHeight};
+    font-size: ${props => props.theme.fonts.primary.small.contentHeight};
 `

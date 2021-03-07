@@ -20,12 +20,30 @@ const theme = {
   fonts: {
     primary: {
       font: `'Playfair Display', serif`,
-      heading: "88px",
-      sub: "34px",
-      content: "20px",
-      headingHeight: "115px",
-      subHeight: "44px",
-      contentHeight: "26px",
+      small: {
+        heading: "44px",
+        sub: "17px",
+        content: "10px",
+        headingHeight: "57px",
+        subHeight: "22px",
+        contentHeight: "14px",
+      },
+      medium: {
+        heading: "88px",
+        sub: "34px",
+        content: "20px",
+        headingHeight: "115px",
+        subHeight: "44px",
+        contentHeight: "26px",
+      },
+      large: {
+        heading: "88px",
+        sub: "34px",
+        content: "20px",
+        headingHeight: "115px",
+        subHeight: "44px",
+        contentHeight: "26px",
+      },
     },
     secondary: {
       font: `'Montserrat', sans-serif`,

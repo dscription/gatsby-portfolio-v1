@@ -2,25 +2,26 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   html {
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
-  box-sizing: border-box;
-  overflow-y: scroll;
-}
+    box-sizing: border-box;
+  }
+
+   /* The Universal Selector */
+   *, /* All elements*/
+   *::before, /* All ::before pseudo-elements */
+   *::after { /* All ::after pseudo-elements */
+    /* height & width will now include border & padding by default
+       but can be over-ridden as needed */
+    box-sizing: inherit;
+   }
+
   body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
-}
+  }
 
   button:hover {
     background-color: ${props => props.theme.colors.accent};
