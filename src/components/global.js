@@ -17,6 +17,8 @@ const GlobalStyle = createGlobalStyle`
   body {
   margin: 0;
   height: 100vh;
+  /* todo: min width could probably be set to a variable from the theme. */
+  min-width: 411px;
   font-family: georgia, serif;
   font-weight: normal;
   word-wrap: break-word;

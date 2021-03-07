@@ -2,7 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import Section from "../layouts/Section"
 import { StaticImage } from "gatsby-plugin-image"
-import {SubHeading, Content } from "../elements"
+import { SubHeading, Content } from "../elements"
+import { above } from "../utilities"
 
 const About = () => {
   return (
@@ -50,21 +51,33 @@ const List = styled.ul`
 `
 
 const TextContainer = styled.div`
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin: 0px auto;
+  order: 2;
+  /* Above Medium Breakpoint */
+  ${above.med`
+    order: 1;
+    width: 70%;
+    text-align: center;
+    `}
 `
 const ImageContainer = styled.div`
-  width: 50%;
+  justify-content: center;
+  margin: 0px auto;
+  order: 1;
+  /* Above Medium Breakpoint */
+  ${above.med`
+    order: 2;
+    width: 30%;
+    `}
 `
 
 const Row = styled(Section)`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  ${above.med`
+    flex-direction: row;
+    `}
 `
 
 export default About

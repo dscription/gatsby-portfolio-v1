@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Section from "../layouts/Section"
-import {SubHeading, Content } from "../elements"
+import { SubHeading, Content } from "../elements"
 
 const Experience = () => {
   const [jobIndex, setJobIndex] = useState(0)
@@ -66,6 +66,7 @@ const Experience = () => {
 }
 
 const JobSelector = styled.li`
+  padding: 0px;
   background-color: ${props =>
     props.selected === true ? props.theme.colors.accent : ""};
   color: ${props =>
@@ -80,6 +81,7 @@ const JobSelector = styled.li`
 const AccomplishmentContainer = styled.div``
 
 const Accomplishments = styled.ul`
+  padding: 0px;
   li {
     list-style: none;
   }
@@ -100,6 +102,7 @@ const Jobs = styled.ul`
   display: flex;
   text-decoration: none;
   list-style: none;
+  padding: 0px;
 
   li {
     padding: 10px;

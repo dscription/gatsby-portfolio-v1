@@ -10,10 +10,6 @@ const Section = styled.section`
   justify-content: center;
   padding: 0px 20px;
   margin: 0px auto;
-
-  /* ${above.small`
-      
-    `}; */
 `
 
 export default Section
