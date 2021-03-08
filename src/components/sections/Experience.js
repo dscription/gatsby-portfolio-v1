@@ -43,7 +43,7 @@ const Experience = () => {
                     onClick={() => setJobIndex(index)}
                     selected={jobIndex === index ? true : false}
                   >
-                    <span>{company}</span>
+                    <Content styled={{minWidth: '140px'}}>{company}</Content>
                   </JobSelector>
                 )
               })}

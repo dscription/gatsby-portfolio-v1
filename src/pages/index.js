@@ -21,12 +21,12 @@ const theme = {
     primary: {
       font: `'Playfair Display', serif`,
       small: {
-        heading: "44px",
-        sub: "17px",
-        content: "10px",
-        headingHeight: "57px",
-        subHeight: "22px",
-        contentHeight: "14px",
+        heading: "60px",
+        sub: "30px",
+        content: "20px",
+        headingHeight: "78px",
+        subHeight: "39px",
+        contentHeight: "21px",
       },
       medium: {
         heading: "88px",

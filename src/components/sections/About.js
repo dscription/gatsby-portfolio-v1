@@ -20,7 +20,7 @@ const About = () => {
           to complex problems. I strive to create products and experiences that
           bring people together.
         </Content>
-        <Content>Here are some technologies that I am proficient in:</Content>
+        <Content>Here are some technologies that I am currently using:</Content>
         <List>
           <li>React</li>
           <li>HTML & CSS</li>
@@ -31,7 +31,7 @@ const About = () => {
         </List>
       </TextContainer>
       <ImageContainer>
-        <StaticImage
+        <StaticImage style={{borderRadius: 200}}
           src="../../images/headshot.jpeg"
           alt="Dan Boterashvili's Headshot"
           width={350}
@@ -46,7 +46,7 @@ const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, minmax(140px, 200px));
   padding: 0px;
-  margin: 20px 0px 0px;
+  margin: 0px auto;
   list-style-type: square;
 `
 

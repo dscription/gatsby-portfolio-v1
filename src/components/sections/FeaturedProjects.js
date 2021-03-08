@@ -43,7 +43,6 @@ const FeaturedProjects = () => {
 }
 
 const Container = styled(Section)`
-  
 `
 
 export default FeaturedProjects

@@ -2,8 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import { SubHeading } from "../elements"
 import { StaticImage } from "gatsby-plugin-image"
+import { above } from "../utilities"
 
-const Featured = ({title, html}) => {
+const Featured = ({ title, html }) => {
   return (
     <FeaturedContainer>
       <TextContainer>
@@ -30,19 +31,30 @@ const DescriptionContainer = styled.div`
   background: ${props => props.theme.colors.backgroundSecondary};
   color: ${props => props.theme.colors.secondary};
   min-height: 100px;
-  width: 70%;
 `
 
 const FeaturedContainer = styled.div`
-  height: 50vh;
   display: flex;
+  flex-direction: column;
+  padding: 20px 0px;
+  ${above.med`
+    flex-direction: row;
+  `}
 `
 
 const TextContainer = styled.div`
-  width: 50%;
+  width: 100%;
   align-items: center;
   text-align: center;
+  order: 2;
+  ${above.med`
+    order:1;
+  `}
 `
 const ImageContainer = styled.div`
-  width: 50%;
+  width: 100%;
+  order: 1;
+  ${above.med`
+    order: 2
+  `}
 `
