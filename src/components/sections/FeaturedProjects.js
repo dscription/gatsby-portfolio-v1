@@ -29,7 +29,7 @@ const FeaturedProjects = () => {
     ({ node }) => node
   )
   return (
-    <Container>
+    <Container id="featured">
       <SubHeading>Featured Projects</SubHeading>
       {featuredProjects &&
         featuredProjects.map(({ node }, index) => {

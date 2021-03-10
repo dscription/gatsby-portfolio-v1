@@ -27,7 +27,7 @@ const Experience = () => {
   const job = jobs[jobIndex].node.frontmatter
 
   return (
-    <Section>
+    <Section id="experience">
       <SubHeading>Experience</SubHeading>
       <Flex>
         <JobsContainer>

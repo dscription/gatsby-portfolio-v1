@@ -13,19 +13,19 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
         <Links>
           <List>
             <li>
-              <Linka href="/#about">About Me</Linka>
+              <LinkTo href="/#about">About Me</LinkTo>
             </li>
             <li>
-              <Linka href="">Experience</Linka>
+              <LinkTo href="/#experience">Experience</LinkTo>
             </li>
             <li>
-              <Linka href="">Featured Projects</Linka>
+              <LinkTo href="/#featured">Featured Projects</LinkTo>
             </li>
+            {/* <li>
+              <LinkTo href="/#projects">Projects</LinkTo>
+            </li> */}
             <li>
-              <Linka href="">Projects</Linka>
-            </li>
-            <li>
-              <Linka href="">Contact</Linka>
+              <LinkTo href="/#contact">Contact</LinkTo>
             </li>
           </List>
           <div>
@@ -60,7 +60,7 @@ const ResumeButton = styled.a`
   `}
 `
 
-const Linka = styled(Link)`
+const LinkTo = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.colors.primary};
   margin: 0px 10px;
