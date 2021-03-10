@@ -11,6 +11,6 @@ export const Button = styled.button`
   border-color: ${props => props.theme.colors.accent};
   border-radius: 5px;
   font-size: 30px;
-  margin: 0px auto;
+  margin: 10px auto;
 `
 

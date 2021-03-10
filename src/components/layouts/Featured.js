@@ -28,9 +28,11 @@ const Featured = ({ title, html }) => {
 export default Featured
 
 const DescriptionContainer = styled.div`
+  display: flex;
   background: ${props => props.theme.colors.backgroundSecondary};
   color: ${props => props.theme.colors.secondary};
   min-height: 100px;
+  justify-content: center;
 `
 
 const FeaturedContainer = styled.div`

@@ -31,7 +31,8 @@ const About = () => {
         </List>
       </TextContainer>
       <ImageContainer>
-        <StaticImage style={{borderRadius: 200}}
+        <StaticImage
+          style={{ borderRadius: 200 }}
           src="../../images/headshot.jpeg"
           alt="Dan Boterashvili's Headshot"
           width={350}
@@ -59,18 +60,20 @@ const TextContainer = styled.div`
   /* Above Medium Breakpoint */
   ${above.med`
     order: 1;
-    width: 70%;
+    width: 60%;
     text-align: center;
     `}
 `
 const ImageContainer = styled.div`
+  display: flex;
   justify-content: center;
   margin: 0px auto;
   order: 1;
   /* Above Medium Breakpoint */
   ${above.med`
     order: 2;
-    width: 30%;
+    width: 40%;
+    padding: 20px;
     `}
 `
 

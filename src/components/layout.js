@@ -1,13 +1,16 @@
-import React from "react"
-import { navy, peach } from "../components/utilities/Colors"
+import React, { useState } from "react"
+// import { navy, peach } from "../components/utilities/Colors"
 import styled from "styled-components"
 import Header from "./layouts/Header"
 import GlobalStyle from "./global"
+import Menu from "./layouts/Menu"
 
 const Layout = ({ children }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   return (
     <Container>
-      <Header />
+      <Header setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+      <Menu isMenuOpen={isMenuOpen} />
       <Main>{children}</Main>
       <GlobalStyle />
     </Container>

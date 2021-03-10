@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 
-const Header = ({ className }) => {
+const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
   return (
     <header className={className}>
       <Nav>
@@ -28,6 +28,9 @@ const Header = ({ className }) => {
           </List>
           <div>
             <ResumeButton>Resume</ResumeButton>
+          </div>
+          <div>
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>Open Menu</button>
           </div>
         </Links>
       </Nav>
