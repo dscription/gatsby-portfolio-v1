@@ -7,7 +7,7 @@ import { above } from "../utilities"
 
 const About = () => {
   return (
-    <Row>
+    <Row id="about">
       <TextContainer>
         <SubHeading>Who am I?</SubHeading>
         <Content>

@@ -1,5 +1,7 @@
 import React from "react"
 import styled from "styled-components"
+import {below, above} from '../utilities'
+import {Link} from 'gatsby'
 
 const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
   return (
@@ -11,19 +13,19 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
         <Links>
           <List>
             <li>
-              <Link href="">About Me</Link>
+              <Linka href="/#about">About Me</Linka>
             </li>
             <li>
-              <Link href="">Experience</Link>
+              <Linka href="">Experience</Linka>
             </li>
             <li>
-              <Link href="">Featured Projects</Link>
+              <Linka href="">Featured Projects</Linka>
             </li>
             <li>
-              <Link href="">Projects</Link>
+              <Linka href="">Projects</Linka>
             </li>
             <li>
-              <Link href="">Contact</Link>
+              <Linka href="">Contact</Linka>
             </li>
           </List>
           <div>
@@ -53,9 +55,12 @@ const ResumeButton = styled.a`
   font-size: 20px;
   // todo: give button a hover state.
   // todo: give button a border-radius.
+  ${below.large`
+    display: none;
+  `}
 `
 
-const Link = styled.a`
+const Linka = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.colors.primary};
   margin: 0px 10px;
@@ -65,12 +70,24 @@ const List = styled.ol`
   display: flex;
   align-items: center;
   list-style: none;
+
+  ${below.large`
+    li {
+      display: none;
+    }
+  `}
 `
 
 const Links = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  ${above.large`
+    button {
+      display: none;
+    }
+  `}
 `
 
 const Nav = styled.nav`
