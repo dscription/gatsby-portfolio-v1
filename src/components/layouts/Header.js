@@ -29,7 +29,7 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
             </li>
           </List>
           <div>
-            <ResumeButton>Resume</ResumeButton>
+            <ResumeButton href="/resume.pdf">Resume</ResumeButton>
           </div>
           <div>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)}>Open Menu</button>
