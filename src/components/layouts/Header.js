@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import {below, above} from '../utilities'
-import {Link} from 'gatsby'
+import { below, above, whitePurple } from "../utilities"
+import { Link } from "gatsby"
+import HamburgerIcon from "../../icons/hamburger.png"
 
 const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
   return (
@@ -32,13 +33,27 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
             <ResumeButton href="/resume.pdf">Resume</ResumeButton>
           </div>
           <div>
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)}>Open Menu</button>
+            <HamburgerButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              <img
+                style={{
+                  height: "50px",
+                  width: "50px",
+                }}
+                src={HamburgerIcon}
+                alt="hamburger-menu-icon"
+              />
+            </HamburgerButton>
           </div>
         </Links>
       </Nav>
     </header>
   )
 }
+
+const HamburgerButton = styled.button`
+  border: none;
+  background-color: transparent;
+`
 
 const Logo = styled.a`
   text-decoration: none;

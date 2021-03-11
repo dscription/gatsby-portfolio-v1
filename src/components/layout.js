@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
   return (
     <Container>
       <Header setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
-      <Menu isMenuOpen={isMenuOpen} />
+      <Menu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <Main>{children}</Main>
       <GlobalStyle />
     </Container>
