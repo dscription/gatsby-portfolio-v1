@@ -68,8 +68,6 @@ const ResumeButton = styled.a`
   padding: 5px;
   border-radius: 5px;
   font-size: 20px;
-  // todo: give button a hover state.
-  // todo: give button a border-radius.
   ${below.large`
     display: none;
   `}

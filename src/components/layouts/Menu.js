@@ -1,4 +1,6 @@
 import React from "react"
+import styled from "styled-components"
+import { Link } from "gatsby"
 import { useSpring, animated } from "react-spring"
 import "./menu.css"
 
@@ -11,15 +13,31 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <animated.div style={menuAnimation} className="nav-menu">
-      <button onClick={() => setIsMenuOpen(!isMenuOpen)}>Close</button>
+      <button onClick={() => setIsMenuOpen(false)}>Close</button>
       <ul>
-        <li>Link</li>
-        <li>Link</li>
-        <li>Link</li>
-        <li>Link</li>
+        <li>
+          <LinkTo onClick={() => setIsMenuOpen(false)} href="/#about">
+            About Me
+          </LinkTo>
+        </li>
+        <li>
+          <LinkTo href="/#experience">Experience</LinkTo>
+        </li>
+        <li>
+          <LinkTo href="/#featured">Featured Projects</LinkTo>
+        </li>
+        <li>
+          <LinkTo href="/#contact">Contact</LinkTo>
+        </li>
       </ul>
     </animated.div>
   )
 }
 
 export default Menu
+
+const LinkTo = styled(Link)`
+  text-decoration: none;
+  color: ${props => props.theme.colors.primary};
+  margin: 0px 10px;
+`
