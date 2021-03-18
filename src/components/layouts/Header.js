@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { below, above, whitePurple } from "../utilities"
+import { below, above } from "../utilities"
 import { Link } from "gatsby"
 import HamburgerIcon from "../../icons/hamburger.png"
 
@@ -9,24 +9,21 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
     <header className={className}>
       <Nav>
         <div>
-          <Logo href="">Dan Boterashvili</Logo>
+          <Logo to="">Dan Boterashvili</Logo>
         </div>
         <Links>
           <List>
             <li>
-              <LinkTo href="/#about">About Me</LinkTo>
+              <LinkTo to="/#about">About Me</LinkTo>
             </li>
             <li>
-              <LinkTo href="/#experience">Experience</LinkTo>
+              <LinkTo to="/#experience">Experience</LinkTo>
             </li>
             <li>
-              <LinkTo href="/#featured">Featured Projects</LinkTo>
+              <LinkTo to="/#featured">Featured Projects</LinkTo>
             </li>
-            {/* <li>
-              <LinkTo href="/#projects">Projects</LinkTo>
-            </li> */}
             <li>
-              <LinkTo href="/#contact">Contact</LinkTo>
+              <LinkTo to="/#contact">Contact</LinkTo>
             </li>
           </List>
           <div>

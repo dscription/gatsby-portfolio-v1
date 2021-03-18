@@ -34,15 +34,14 @@ const FeaturedProjects = () => {
       {featuredProjects &&
         featuredProjects.map(({ node }, index) => {
           const { html, frontmatter } = node
-          const { title, photo, github, deployed, tech } = frontmatter
+          const { title } = frontmatter
 
-          return <Featured title={title} html={html} />
+          return <Featured title={title} html={html} key={index} />
         })}
     </Container>
   )
 }
 
-const Container = styled(Section)`
-`
+const Container = styled(Section)``
 
 export default FeaturedProjects

@@ -1,6 +1,6 @@
 import React from "react"
 import Section from '../layouts/Section'
-import { Button, Heading, SubHeading, Content } from "../elements"
+import { Button, SubHeading, Content } from "../elements"
 
 
 const Contact = () => {

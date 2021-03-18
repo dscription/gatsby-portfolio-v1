@@ -5,7 +5,6 @@ import Layout from "../components/layout"
 import About from "../components/sections/About"
 import Experience from "../components/sections/Experience"
 import FeaturedProjects from "../components/sections/FeaturedProjects"
-import Projects from "../components/sections/Projects"
 import Contact from "../components/sections/Contact"
 import { lightGreen } from "../components/utilities/Colors"
 

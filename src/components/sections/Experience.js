@@ -35,7 +35,7 @@ const Experience = () => {
             {jobs &&
               jobs.map(({ node }, index) => {
                 const { frontmatter } = node
-                const { title, company, date, accomplishments } = frontmatter
+                const {  company } = frontmatter
 
                 return (
                   <JobSelector

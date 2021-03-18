@@ -16,18 +16,18 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
       <button onClick={() => setIsMenuOpen(false)}>Close</button>
       <ul>
         <li>
-          <LinkTo onClick={() => setIsMenuOpen(false)} href="/#about">
+          <LinkTo onClick={() => setIsMenuOpen(false)} to="/#about">
             About Me
           </LinkTo>
         </li>
         <li>
-          <LinkTo href="/#experience">Experience</LinkTo>
+          <LinkTo to="/#experience">Experience</LinkTo>
         </li>
         <li>
-          <LinkTo href="/#featured">Featured Projects</LinkTo>
+          <LinkTo to="/#featured">Featured Projects</LinkTo>
         </li>
         <li>
-          <LinkTo href="/#contact">Contact</LinkTo>
+          <LinkTo to="/#contact">Contact</LinkTo>
         </li>
       </ul>
     </animated.div>
