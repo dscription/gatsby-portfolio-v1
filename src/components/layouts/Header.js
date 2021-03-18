@@ -3,13 +3,23 @@ import styled from "styled-components"
 import { below, above } from "../utilities"
 import { Link } from "gatsby"
 import HamburgerIcon from "../../icons/hamburger.png"
+import DB from "../../icons/db_icon.png"
 
 const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
   return (
     <header className={className}>
       <Nav>
         <div>
-          <Logo to="">Dan Boterashvili</Logo>
+          <Logo to="">
+            <img
+              style={{
+                height: "100px",
+                width: "100px",
+              }}
+              src={DB}
+              alt="db logo icon"
+            />
+          </Logo>
         </div>
         <Links>
           <List>
