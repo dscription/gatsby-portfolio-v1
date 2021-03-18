@@ -2,8 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import { below, above } from "../utilities"
 import { Link } from "gatsby"
-import HamburgerIcon from "../../icons/hamburger.png"
-import DB from "../../icons/db_icon.png"
+import Hamburger_SVG from "../../icons/hamburger.svg"
+import DB_SVG from "../../icons/db_svg.svg"
 
 const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
   return (
@@ -11,14 +11,7 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
       <Nav>
         <div>
           <Logo to="">
-            <img
-              style={{
-                height: "100px",
-                width: "100px",
-              }}
-              src={DB}
-              alt="db logo icon"
-            />
+            <img style={{height: "50px"}}src={DB_SVG} alt="db logo icon" />
           </Logo>
         </div>
         <Links>
@@ -43,10 +36,10 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
             <HamburgerButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <img
                 style={{
-                  height: "50px",
-                  width: "50px",
+                  width: "65%" ,
+                  height: "65%"
                 }}
-                src={HamburgerIcon}
+                src={Hamburger_SVG}
                 alt="hamburger-menu-icon"
               />
             </HamburgerButton>
@@ -117,6 +110,8 @@ const Nav = styled.nav`
   width: 100%;
   position: relative;
 `
+
+
 
 export default styled(Header)`
   display: flex;
