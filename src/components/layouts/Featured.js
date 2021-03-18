@@ -56,6 +56,8 @@ const TextContainer = styled.div`
 const ImageContainer = styled.div`
   width: 100%;
   order: 1;
+  opacity: 0.2;
+  &:hover {opacity: 1}
   ${above.med`
     order: 2
   `}

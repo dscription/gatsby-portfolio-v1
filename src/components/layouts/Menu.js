@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { useSpring, animated } from "react-spring"
+import Close from "../../icons/close.svg"
 import "./menu.css"
 
 const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
@@ -13,7 +14,9 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <animated.div style={menuAnimation} className="nav-menu">
-      <button onClick={() => setIsMenuOpen(false)}>Close</button>
+      <CloseButton onClick={() => setIsMenuOpen(false)}>
+        <img src={Close} />
+      </CloseButton>
       <ul>
         <li>
           <LinkTo onClick={() => setIsMenuOpen(false)} to="/#about">
@@ -40,4 +43,8 @@ const LinkTo = styled(Link)`
   text-decoration: none;
   color: ${props => props.theme.colors.primary};
   margin: 0px 10px;
+`
+const CloseButton = styled.button`
+  border: none;
+  background-color: transparent;
 `

@@ -11,7 +11,7 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
       <Nav>
         <div>
           <Logo to="">
-            <img style={{height: "50px"}}src={DB_SVG} alt="db logo icon" />
+            <img style={{height: "60px"}}src={DB_SVG} alt="db logo icon" />
           </Logo>
         </div>
         <Links>
