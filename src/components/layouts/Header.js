@@ -11,7 +11,7 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
       <Nav>
         <div>
           <Logo to="">
-            <img style={{height: "60px"}}src={DB_SVG} alt="db logo icon" />
+            <img style={{ height: "60px" }} src={DB_SVG} alt="db logo icon" />
           </Logo>
         </div>
         <Links>
@@ -36,8 +36,8 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
             <HamburgerButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <img
                 style={{
-                  width: "65%" ,
-                  height: "65%"
+                  width: "65%",
+                  height: "65%",
                 }}
                 src={Hamburger_SVG}
                 alt="hamburger-menu-icon"
@@ -110,8 +110,6 @@ const Nav = styled.nav`
   width: 100%;
   position: relative;
 `
-
-
 
 export default styled(Header)`
   display: flex;

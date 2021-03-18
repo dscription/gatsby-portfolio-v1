@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { useSpring, animated } from "react-spring"
 import Close from "../../icons/close.svg"
 import "./menu.css"
+import MenuLink from '../elements'
 
 const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
   const menuAnimation = useSpring({
@@ -17,32 +18,37 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
       <CloseButton onClick={() => setIsMenuOpen(false)}>
         <img src={Close} />
       </CloseButton>
-      <ul>
+      <MenuLinks>
         <li>
-          <LinkTo onClick={() => setIsMenuOpen(false)} to="/#about">
+          <MenuLink onClick={() => setIsMenuOpen(false)} to="/#about">
             About Me
-          </LinkTo>
+          </MenuLink>
         </li>
         <li>
-          <LinkTo to="/#experience">Experience</LinkTo>
+          <MenuLink to="/#experience">Experience</MenuLink>
         </li>
         <li>
-          <LinkTo to="/#featured">Featured Projects</LinkTo>
+          <MenuLink to="/#featured">Featured Projects</MenuLink>
         </li>
         <li>
-          <LinkTo to="/#contact">Contact</LinkTo>
+          <MenuLink to="/#contact">Contact</MenuLink>
         </li>
-      </ul>
+      </MenuLinks>
     </animated.div>
   )
 }
 
 export default Menu
 
-const LinkTo = styled(Link)`
-  text-decoration: none;
+const MenuLinks = styled.ul`
+  list-style-type: none;
+`
+
+
+const MenuLink = styled(Link)`
   color: ${props => props.theme.colors.primary};
   margin: 0px 10px;
+  text-decoration: none;
 `
 const CloseButton = styled.button`
   border: none;
