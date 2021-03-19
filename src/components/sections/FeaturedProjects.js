@@ -17,6 +17,7 @@ const FeaturedProjects = () => {
               github
               deployed
               tech
+              cover
             }
             html
           }
@@ -34,9 +35,11 @@ const FeaturedProjects = () => {
       {featuredProjects &&
         featuredProjects.map(({ node }, index) => {
           const { html, frontmatter } = node
-          const { title } = frontmatter
+          const { title, cover } = frontmatter
 
-          return <Featured title={title} html={html} key={index} />
+          return (
+            <Featured title={title} html={html} key={index} cover={cover} />
+          )
         })}
     </Container>
   )

@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 import { useSpring, animated } from "react-spring"
 import Close from "../../icons/close.svg"
 import "./menu.css"
-import MenuLink from '../elements'
 
 const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
   const menuAnimation = useSpring({

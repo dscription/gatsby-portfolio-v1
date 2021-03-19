@@ -2,63 +2,80 @@ import React from "react"
 import styled from "styled-components"
 import { SubHeading } from "../elements"
 import { StaticImage } from "gatsby-plugin-image"
-import { above } from "../utilities"
+import { above, below } from "../utilities"
 
-const Featured = ({ title, html }) => {
+const Featured = ({ title, html, cover }) => {
   return (
     <FeaturedContainer>
-      <TextContainer>
-        <SubHeading>{title}</SubHeading>
-        <DescriptionContainer dangerouslySetInnerHTML={{ __html: html }} />
-        {/* //todo: Add list of project technolgies */}
-        {/* //todo: Add link to github and deployed project */}
-      </TextContainer>
-      <ImageContainer>
-        <StaticImage
-          src="../../images/headshot.jpeg"
-          alt="Dan Boterashvili's Headshot"
-          width={600}
-          height={350}
-        />
-      </ImageContainer>
+      <SubHeading>{title}</SubHeading>
+      <Row>
+        <TextContainer>
+          <Description dangerouslySetInnerHTML={{ __html: html }} />
+          {/* //todo: Add list of project technolgies */}
+          {/* //todo: Add link to github and deployed project */}
+        </TextContainer>
+        <ImageContainer>
+          <StaticImage
+            src="../../images/tux.png"
+            alt={`${title} project photo`}
+            width={600}
+            height={350}
+          />
+        </ImageContainer>
+      </Row>
     </FeaturedContainer>
   )
 }
 
 export default Featured
 
-const DescriptionContainer = styled.div`
+const Row = styled.div`
   display: flex;
-  background: ${props => props.theme.colors.backgroundSecondary};
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+  ${below.med`
+    flex-direction: column;
+  `}
+`
+
+const Description = styled.div`
+  display: flex;
+  background: rgba(140, 134, 133, 0.3);
   color: ${props => props.theme.colors.secondary};
-  min-height: 100px;
+  min-height: 200px;
   justify-content: center;
+  text-align: center;
+  align-items: center;
 `
 
 const FeaturedContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px 0px;
-  ${above.med`
-    flex-direction: row;
-  `}
 `
 
 const TextContainer = styled.div`
   width: 100%;
   align-items: center;
   text-align: center;
+  justify-content: center;
   order: 2;
   ${above.med`
     order:1;
+    
   `}
 `
 const ImageContainer = styled.div`
   width: 100%;
   order: 1;
   opacity: 0.2;
-  &:hover {opacity: 1}
+  &:hover {
+    opacity: 1;
+  }
   ${above.med`
-    order: 2
+   
+    order: 2;
+  
   `}
 `
