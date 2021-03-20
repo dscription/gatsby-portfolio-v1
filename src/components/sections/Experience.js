@@ -82,8 +82,9 @@ const AccomplishmentContainer = styled.div``
 
 const Accomplishments = styled.ul`
   padding: 0px;
+  text-align: left;
   li {
-    list-style: none;
+    list-style-type: square;
   }
 `
 const Flex = styled.div`
