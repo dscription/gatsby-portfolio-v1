@@ -47,6 +47,7 @@ const Description = styled.div`
   justify-content: center;
   text-align: center;
   align-items: center;
+  padding: 0px 10px;
 `
 
 const FeaturedContainer = styled.div`
@@ -61,6 +62,8 @@ const TextContainer = styled.div`
   text-align: center;
   justify-content: center;
   order: 2;
+  padding-right: 10px;
+  
   ${above.med`
     order:1;
     
