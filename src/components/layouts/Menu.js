@@ -15,7 +15,7 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <animated.div style={menuAnimation} className="nav-menu">
       <CloseButton onClick={() => setIsMenuOpen(false)}>
-        <img src={Close} />
+        <img style={{ height: "50px", width: "50px" }} src={Close} />
       </CloseButton>
       <MenuLinks>
         <li>
@@ -62,4 +62,10 @@ const MenuLink = styled(Link)`
 const CloseButton = styled.button`
   border: none;
   background-color: transparent;
+  padding: 10px;
+  :hover {
+    background: none;
+    border: 2px solid ${props => props.theme.colors.primary};
+    border-radius: 10px;
+  }
 `
