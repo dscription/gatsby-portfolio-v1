@@ -53,6 +53,11 @@ const Header = ({ className, setIsMenuOpen, isMenuOpen }) => {
 const HamburgerButton = styled.button`
   border: none;
   background-color: transparent;
+  :hover {
+    background: none;
+    border: 2px solid ${props => props.theme.colors.primary};
+    border-radius: 10px;
+  }
 `
 
 const Logo = styled.a`

@@ -1,8 +1,8 @@
 ---
 title: 'Gatsby Portfolio'
 cover: ""
-github: ''
-deployed: ''
+github: 'https://github.com/dscription/gatsby-portfolio-v1'
+deployed: 'http://www.danboterashvili.com/'
 tech:
   - Gatsby
   - React.js

@@ -24,13 +24,19 @@ const Menu = ({ isMenuOpen, setIsMenuOpen }) => {
           </MenuLink>
         </li>
         <li>
-          <MenuLink to="/#experience">Experience</MenuLink>
+          <MenuLink onClick={() => setIsMenuOpen(false)} to="/#experience">
+            Experience
+          </MenuLink>
         </li>
         <li>
-          <MenuLink to="/#featured">Featured Projects</MenuLink>
+          <MenuLink onClick={() => setIsMenuOpen(false)} to="/#featured">
+            Featured Projects
+          </MenuLink>
         </li>
         <li>
-          <MenuLink to="/#contact">Contact</MenuLink>
+          <MenuLink onClick={() => setIsMenuOpen(false)} to="/#contact">
+            Contact
+          </MenuLink>
         </li>
       </MenuLinks>
     </animated.div>
@@ -41,13 +47,17 @@ export default Menu
 
 const MenuLinks = styled.ul`
   list-style-type: none;
+  li {
+    padding: 10px 0px;
+    margin: 0px auto;
+  }
 `
-
 
 const MenuLink = styled(Link)`
   color: ${props => props.theme.colors.primary};
   margin: 0px 10px;
   text-decoration: none;
+  font-size: 30px;
 `
 const CloseButton = styled.button`
   border: none;

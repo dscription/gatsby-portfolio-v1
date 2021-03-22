@@ -1,9 +1,9 @@
 ---
 title: 'Freelance Web Developer'
 company: 'The StudioBooth'
-date: 'Oct 2020 - Present'
+date: 'Aug 2019 - Oct 2020'
 accomplishments: 
-  - Built microsites.
-  - custom html and css. 
-  - interactive photo booth on web.
+  - Fascilitated onsite interactive photobooth exerpiences.
+  - Built microsites with custom HTML and CSS. 
+  - Troubleshooting technical equipment including Cameras and Computers.
 ---
