@@ -63,6 +63,8 @@ const CloseButton = styled.button`
   border: none;
   background-color: transparent;
   padding: 10px;
+  position: fixed;
+  right: 0;
   :hover {
     background: none;
     border: 2px solid ${props => props.theme.colors.primary};
