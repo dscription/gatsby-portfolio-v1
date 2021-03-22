@@ -38,7 +38,7 @@ const theme = {
       large: {
         heading: "88px",
         sub: "34px",
-        content: "24px",
+        content: "20px",
         headingHeight: "115px",
         subHeight: "44px",
         contentHeight: "32px",

@@ -123,7 +123,7 @@ export default styled(Header)`
   background: ${props => props.theme.colors.background};
   color: ${props => props.theme.colors.primary};
   font-family: ${props => props.theme.fonts.primary.font};
-  font-size: ${props => props.theme.fonts.primary.content};
+  font-size: ${props => props.theme.fonts.primary.large.content};
   line-height: ${props => props.theme.fonts.primary.contentHeight};
   padding: 0px 30px;
   align-items: center;
