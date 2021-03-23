@@ -35,10 +35,17 @@ const FeaturedProjects = () => {
       {featuredProjects &&
         featuredProjects.map(({ node }, index) => {
           const { html, frontmatter } = node
-          const { title, photo } = frontmatter
+          const { title, photo, github, deployed } = frontmatter
 
           return (
-            <Featured title={title} html={html} key={index} photo={photo} />
+            <Featured
+              title={title}
+              html={html}
+              key={index}
+              photo={photo}
+              github={github}
+              deployed={deployed}
+            />
           )
         })}
     </Container>
