@@ -1,6 +1,6 @@
 ---
 title: 'Fridgester'
-photo: ''
+photo: 'https://i.imgur.com/sl5oGCh.png'
 github: 'https://github.com/dscription/api-recipe-project'
 deployed: 'http://fridgester-final.surge.sh/'
 tech:

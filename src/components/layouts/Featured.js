@@ -1,25 +1,23 @@
 import React from "react"
 import styled from "styled-components"
 import { SubHeading } from "../elements"
-import { StaticImage } from "gatsby-plugin-image"
-import { above, below } from "../utilities"
+import { above, below, whitePurple } from "../utilities"
 
-const Featured = ({ title, html, cover }) => {
+const Featured = ({ title, html, photo }) => {
   return (
     <FeaturedContainer>
       <SubHeading>{title}</SubHeading>
       <Row>
         <TextContainer>
           <Description dangerouslySetInnerHTML={{ __html: html }} />
-          {/* //todo: Add list of project technolgies */}
-          {/* //todo: Add link to github and deployed project */}
         </TextContainer>
         <ImageContainer>
-          <StaticImage
-            src="../../images/tux.png"
+          <img
+            src={photo}
             alt={`${title} project photo`}
             width={600}
             height={350}
+            style={{ border: '1px dashed white'}}
           />
         </ImageContainer>
       </Row>
@@ -32,7 +30,6 @@ export default Featured
 const Row = styled.div`
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
   align-items: center;
   ${below.med`
     flex-direction: column;
@@ -66,19 +63,17 @@ const TextContainer = styled.div`
   
   ${above.med`
     order:1;
-    
   `}
 `
 const ImageContainer = styled.div`
-  width: 100%;
+  max-width: 100%;
   order: 1;
   opacity: 0.2;
   &:hover {
     opacity: 1;
   }
   ${above.med`
-   
     order: 2;
-  
   `}
 `
+

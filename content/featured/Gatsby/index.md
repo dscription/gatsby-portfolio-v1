@@ -1,6 +1,6 @@
 ---
 title: 'Gatsby Portfolio'
-cover: ""
+photo: 'https://i.imgur.com/9Jc0SKd.png'
 github: 'https://github.com/dscription/gatsby-portfolio-v1'
 deployed: 'http://www.danboterashvili.com/'
 tech:

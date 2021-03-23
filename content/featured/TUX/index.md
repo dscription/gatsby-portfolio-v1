@@ -1,6 +1,6 @@
 ---
 title: 'T.UX'
-cover: "../../images/tux.png"
+photo: 'https://i.imgur.com/sbPfzNZ.png'
 github: 'https://github.com/defawlt/tux'
 deployed: 'https://tux-staging.herokuapp.com/'
 tech:

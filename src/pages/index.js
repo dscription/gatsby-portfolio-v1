@@ -72,7 +72,6 @@ const IndexPage = () => (
       <About />
       <Experience />
       <FeaturedProjects />
-      {/* <Projects /> */}
       <Contact />
     </Layout>
   </ThemeProvider>

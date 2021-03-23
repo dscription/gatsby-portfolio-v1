@@ -31,12 +31,12 @@ const About = () => {
         </List>
       </TextContainer>
       <ImageContainer>
-        <StaticImage
-          style={{ borderRadius: 200 }}
-          src="../../images/headshot.jpeg"
+        <img
+          style={{ borderRadius: 100 }}
+          src="https://i.imgur.com/w5Vepd3.jpeg"
           alt="Dan Boterashvili's Headshot"
-          width={350}
-          height={350}
+          // width={350}
+          // height={350}
         />
       </ImageContainer>
     </Row>
