@@ -32,11 +32,11 @@ const About = () => {
       </TextContainer>
       <ImageContainer>
         <img
-          style={{ borderRadius: 100 }}
-          src="https://i.imgur.com/w5Vepd3.jpeg"
+          style={{ borderRadius: 125 }}
+          src="https://i.imgur.com/xDb6R5X.jpg"
           alt="Dan Boterashvili's Headshot"
-          // width={350}
-          // height={350}
+          width={350}
+          height={350}
         />
       </ImageContainer>
     </Row>
