@@ -23,10 +23,10 @@ const About = () => {
         <Content>Here are some technologies that I am currently using:</Content>
         <List>
           <li>React</li>
-          <li>HTML & CSS</li>
           <li>Gatsby</li>
+          <li>HTML & CSS</li>
           <li>Node.js</li>
-          <li>Neo4j</li>
+          <li>Javascript (ES6)</li>
           <li>GraphQL</li>
         </List>
       </TextContainer>
